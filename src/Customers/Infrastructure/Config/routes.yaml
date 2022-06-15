@@ -1,0 +1,16 @@
+all:
+  path: /
+  methods: GET
+  controller: App\Customers\Infrastructure\Controller\CustomerController::all
+create:
+  path: /
+  methods: POST
+  controller: App\Customers\Infrastructure\Controller\CustomerController::create
+detail:
+  path: /{customerId}
+  methods: GET
+  controller: App\Customers\Infrastructure\Controller\CustomerController::detail
+edit:
+  path: /{customerId}
+  methods: PUT
+  controller: App\Customers\Infrastructure\Controller\CustomerController::edit

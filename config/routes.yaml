@@ -1,0 +1,5 @@
+shared:
+  resource: "../src/Shared/Infrastructure/Config/routes.yaml"
+
+customers:
+  resource: "../src/Customers/Infrastructure/Config/routes.yaml"

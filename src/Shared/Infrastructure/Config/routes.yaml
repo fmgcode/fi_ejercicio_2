@@ -1,0 +1,12 @@
+check:
+  path: /check
+  methods: GET
+  controller: App\Shared\Infrastructure\Controller\SharedController::check
+entities:
+  path: /entities
+  methods: GET
+  controller: App\Shared\Infrastructure\Controller\SharedController::entities
+entities_pdf:
+  path: /entities_pdf
+  methods: GET
+  controller: App\Shared\Infrastructure\Controller\SharedController::entities_pdf
