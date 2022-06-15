@@ -26,7 +26,13 @@ class CustomerDoctrineRepository extends ServiceEntityRepository implements Cust
      */
     public function all(): array
     {
-        $qb = $this->createQueryBuilder('customer');
+        $qb = $this->createQueryBuilder('customer')
+            ->select(
+                'customer.id as id',
+                'customer.identifier as identifier',
+                'customer.name as name',
+                'customer.firstLastname as firstLastname'
+            );
 
         $qb->orderBy('customer.id', 'desc');
 
@@ -41,10 +47,10 @@ class CustomerDoctrineRepository extends ServiceEntityRepository implements Cust
     {
         $qb = $this->createQueryBuilder('customer')
             ->select(
-                'customer.id',
-                'customer.identifier',
-                'customer.name',
-                'customer.firstLastname'
+                'customer.id as id',
+                'customer.identifier as identifier',
+                'customer.name as name',
+                'customer.firstLastname as firstLastname'
             );
 
         if(isset($params['identifier'])){
